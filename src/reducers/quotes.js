@@ -6,7 +6,7 @@ export default (state = [], action) => {
   let updatedQuote;
 
   switch (action.type) {
-    case 'ADD_QUOTE':  
+    case 'ADD_QUOTE':
       return [
         ...state,
         action.quote
@@ -21,7 +21,7 @@ export default (state = [], action) => {
       updatedQuote = {...quote, votes: quote.votes += 1};
 
       return [
-        ...state.slice(0, index), 
+        ...state.slice(0, index),
         updatedQuote,
         ...state.slice(index + 1)
       ];
@@ -32,7 +32,7 @@ export default (state = [], action) => {
       updatedQuote = quote.votes > 0 ? {...quote, votes: quote.votes -= 1} : quote;
 
       return [
-        ...state.slice(0, index), 
+        ...state.slice(0, index),
         updatedQuote,
         ...state.slice(index + 1)
       ];
