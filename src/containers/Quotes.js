@@ -15,7 +15,7 @@ class Quotes extends Component {
         removeQuote={this.props.removeQuote}
       />;
     });
-    
+
     return (
       <div>
         <hr />
@@ -28,7 +28,7 @@ class Quotes extends Component {
             <div className="col-md-4">
               {
               // Render Quotes With QuoteCard component and pass down callback props for removing, upvoting and downvoting quotes
-                quotes 
+                quotes
               }
             </div>
           </div>
