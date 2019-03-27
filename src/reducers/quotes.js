@@ -13,7 +13,7 @@ export default (state = [], action) => {
       ];
 
     case 'REMOVE_QUOTE':
-      return filteredQuotes = state.filter(quote => quote.id !== action.quoteId);
+      return state.filter(quote => quote.id !== action.quoteId);
 
     case 'UPVOTE_QUOTE':
       index = state.findIndex(quote => quote.id === action.quoteId);
