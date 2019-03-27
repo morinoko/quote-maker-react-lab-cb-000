@@ -19,7 +19,7 @@ class QuoteForm extends Component {
   handleOnSubmit = event => {
     // Handle Form Submit event default
     event.preventDefault();
-    
+
     // Create quote object from state
     const quoteId = uuid();
     const quote = {
@@ -27,10 +27,10 @@ class QuoteForm extends Component {
       id: quoteId,
       votes: 0
     };
-    
+
     // Pass quote object to action creator
     this.props.addQuote(quote);
-    
+
     // Update component state to return to default state
     this.setState({ content: '', author: '' });
   }
@@ -42,7 +42,7 @@ class QuoteForm extends Component {
           <div className="col-md-8 col-md-offset-2">
             <div className="panel panel-default">
               <div className="panel-body">
-                <form 
+                <form
                   className="form-horizontal"
                   onSubmit={this.handleOnSubmit}
                 >
